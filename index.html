@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Society Secure — Every Knock Gets Verified</title>
+    <meta name="description"
+        content="Society Secure is a smart society management app for residents and security guards. Visitor management, QR passes, complaints, maintenance & more." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>" />
+</head>
+
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Page Transition -->
+    <div class="page-transition"></div>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="index.html" class="nav-logo">
+            <div class="logo-icon">🛡️</div>
+            Society Secure
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="nav-profile" title="Profile">👤</div>
+        <div class="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Smart Society Management Platform
+                </div>
+                <h1 class="hero-title">
+                    Every Knock<br />Gets <span>Verified.</span>
+                </h1>
+                <p class="hero-desc">
+                    Society Secure brings intelligent visitor management, QR-based access, maintenance payments, and
+                    community tools — all in one seamless app for residents and security guards.
+                </p>
+                <div class="hero-cta">
+                    <a href="contact.html" class="btn-primary">Get Started →</a>
+                    <a href="about.html" class="btn-secondary">Learn More ↓</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-num"><span>500</span>+</div>
+                        <div class="stat-label">Societies Onboarded</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num"><span>50k</span>+</div>
+                        <div class="stat-label">Residents Using App</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num"><span>99%</span></div>
+                        <div class="stat-label">Uptime Guaranteed</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phone Mockup -->
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="phone-notch"></div>
+                        <div style="color:rgba(255,255,255,0.5);font-size:0.65rem;">Security Portal ✔</div>
+                        <div class="phone-title">Security Guard</div>
+                        <div class="phone-stat-row">
+                            <div class="phone-stat">
+                                <div class="num">3</div>
+                                <div class="lbl">Inside</div>
+                            </div>
+                            <div class="phone-stat">
+                                <div class="num">12</div>
+                                <div class="lbl">Today</div>
+                            </div>
+                            <div class="phone-stat" style="border:1px solid rgba(239,68,68,0.3)">
+                                <div class="num" style="color:#ef4444">0</div>
+                                <div class="lbl">Alerts</div>
+                            </div>
+                        </div>
+                        <div class="phone-action-title">Quick Actions</div>
+                        <div class="phone-actions">
+                            <div class="phone-action">
+                                <div class="icon">📋</div>
+                                <div class="lbl">Log Entry</div>
+                            </div>
+                            <div class="phone-action">
+                                <div class="icon">📷</div>
+                                <div class="lbl">Scan QR</div>
+                            </div>
+                            <div class="phone-action">
+                                <div class="icon">👥</div>
+                                <div class="lbl">Inside Now</div>
+                            </div>
+                            <div class="phone-action">
+                                <div class="icon">📅</div>
+                                <div class="lbl">Today's Log</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="float-badge float-badge-1">
+                    <div class="badge-icon">✅</div>
+                    <div>
+                        <div style="font-size:0.65rem;color:#6b8a92;">Visitor verified</div>
+                        <div>QR Pass Approved</div>
+                    </div>
+                </div>
+                <div class="float-badge float-badge-2">
+                    <div class="badge-icon">🚨</div>
+                    <div>
+                        <div style="font-size:0.65rem;color:#6b8a92;">Panic Alert</div>
+                        <div>Guards Notified</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            SCROLL
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-box reveal">
+                <div class="big-num"><span class="counter" data-target="500" data-suffix="+">0+</span></div>
+                <p>Societies Secured</p>
+            </div>
+            <div class="stat-box reveal reveal-delay-1">
+                <div class="big-num"><span class="counter" data-target="50000" data-suffix="+">0+</span></div>
+                <p>Happy Residents</p>
+            </div>
+            <div class="stat-box reveal reveal-delay-2">
+                <div class="big-num"><span class="counter" data-target="200000" data-suffix="+">0+</span></div>
+                <p>Visitors Logged</p>
+            </div>
+            <div class="stat-box reveal reveal-delay-3">
+                <div class="big-num"><span class="counter" data-target="99" data-suffix="%">0%</span></div>
+                <p>Satisfaction Rate</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" id="features">
+        <div class="section-container">
+            <div class="features-header">
+                <div class="section-label reveal">What We Offer</div>
+                <h2 class="section-title reveal">Everything Your Society<br /><span>Needs in One App</span></h2>
+                <p class="section-desc reveal">From visitor logging to panic alerts — Society Secure covers every corner
+                    of your gated community.</p>
+            </div>
+            <div class="features-grid">
+
+                <div class="feature-card reveal">
+                    <div class="feature-number">01</div>
+                    <div class="feature-icon">🔐</div>
+                    <h3>Visitor Management</h3>
+                    <p>Security guards can log visitor entries with name, phone, flat number, and purpose. Full audit
+                        trail maintained digitally — no more paper registers.</p>
+                </div>
+
+                <div class="feature-card reveal reveal-delay-1">
+                    <div class="feature-number">02</div>
+                    <div class="feature-icon">📱</div>
+                    <h3>QR Pass System</h3>
+                    <p>Residents pre-approve guests with a unique QR code. Guards scan or verify the pass code at the
+                        gate — instant, paperless, fraud-proof entry.</p>
+                </div>
+
+                <div class="feature-card reveal reveal-delay-2">
+                    <div class="feature-number">03</div>
+                    <div class="feature-icon">🚨</div>
+                    <h3>Panic / Emergency Alert</h3>
+                    <p>One tap sends an SOS to all security guards with your location. Emergency contacts for Police
+                        (100), Fire (101) and society office always at hand.</p>
+                </div>
+
+                <div class="feature-card reveal reveal-delay-1">
+                    <div class="feature-number">04</div>
+                    <div class="feature-icon">🔧</div>
+                    <h3>Complaints & Issues</h3>
+                    <p>Residents raise maintenance complaints — water leakage, electrical faults, etc. — tagged with
+                        priority level (Low / Medium / High). Track status in real time.</p>
+                </div>
+
+                <div class="feature-card reveal reveal-delay-2">
+                    <div class="feature-number">05</div>
+                    <div class="feature-icon">💳</div>
+                    <h3>Maintenance Payments</h3>
+                    <p>Pay society bills digitally. Track total paid, pending, and overall billing history — no more
+                        knocking on the committee door.</p>
+                </div>
+
+                <div class="feature-card reveal reveal-delay-3">
+                    <div class="feature-number">06</div>
+                    <div class="feature-icon">🏊</div>
+                    <h3>Amenity Booking</h3>
+                    <p>Book clubhouse, gym, swimming pool, and more from your phone. View your bookings, manage slots —
+                        zero friction, 24/7 available.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- APP SHOWCASE -->
+    <section class="app-showcase" id="app">
+        <div class="section-container">
+            <div class="showcase-grid">
+                <div class="showcase-phones">
+                    <!-- Phone 1: Security Guard -->
+                    <div class="showcase-phone showcase-phone-1">
+                        <div class="showcase-phone-screen"
+                            style="background:#0d3d4a; padding:16px 12px; min-height:280px;">
+                            <div style="color:rgba(255,255,255,0.4);font-size:0.6rem;margin-bottom:4px;">Security Portal
+                            </div>
+                            <div style="color:white;font-weight:700;font-size:0.9rem;margin-bottom:12px;">Guard
+                                Dashboard</div>
+                            <div class="sp-block">
+                                <div class="sp-text-sm">Currently Inside</div>
+                                <div class="sp-text-lg">3 Visitors</div>
+                            </div>
+                            <div class="sp-block">
+                                <div class="sp-text-sm">Today's Entries</div>
+                                <div class="sp-text-lg">12 Logged</div>
+                            </div>
+                            <div class="sp-row" style="margin-top:8px;gap:6px;">
+                                <div class="sp-chip">Log Entry</div>
+                                <div class="sp-chip">Scan QR</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Phone 2: Resident Home -->
+                    <div class="showcase-phone showcase-phone-2">
+                        <div class="showcase-phone-screen"
+                            style="background:#0a1f26; padding:16px 12px; min-height:320px;">
+                            <div style="color:rgba(255,255,255,0.4);font-size:0.6rem;margin-bottom:4px;">Good Evening 🌙
+                            </div>
+                            <div style="color:white;font-weight:700;font-size:0.95rem;margin-bottom:4px;">Resident User
+                            </div>
+                            <div style="color:rgba(255,255,255,0.4);font-size:0.6rem;margin-bottom:14px;">Flat A-101 ·
+                                SOCIETY_001</div>
+                            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:14px;">
+                                <div class="sp-block" style="text-align:center;padding:8px 4px;">
+                                    <div style="font-size:0.9rem;color:white;font-weight:700;">0</div>
+                                    <div style="font-size:0.55rem;color:rgba(255,255,255,0.4);">Notices</div>
+                                </div>
+                                <div class="sp-block" style="text-align:center;padding:8px 4px;">
+                                    <div style="font-size:0.9rem;color:white;font-weight:700;">0</div>
+                                    <div style="font-size:0.55rem;color:rgba(255,255,255,0.4);">Visitors</div>
+                                </div>
+                                <div class="sp-block" style="text-align:center;padding:8px 4px;">
+                                    <div style="font-size:0.9rem;color:white;font-weight:700;">₹0</div>
+                                    <div style="font-size:0.55rem;color:rgba(255,255,255,0.4);">Bills</div>
+                                </div>
+                            </div>
+                            <div
+                                style="color:rgba(255,255,255,0.4);font-size:0.6rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;">
+                                Quick Actions</div>
+                            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;">
+                                <div class="sp-block" style="text-align:center;padding:8px 4px;">
+                                    <div>🚨</div>
+                                    <div style="font-size:0.55rem;color:rgba(255,255,255,0.6);">Panic</div>
+                                </div>
+                                <div class="sp-block" style="text-align:center;padding:8px 4px;">
+                                    <div>📱</div>
+                                    <div style="font-size:0.55rem;color:rgba(255,255,255,0.6);">Guest QR</div>
+                                </div>
+                                <div class="sp-block" style="text-align:center;padding:8px 4px;">
+                                    <div>🔧</div>
+                                    <div style="font-size:0.55rem;color:rgba(255,255,255,0.6);">Complaint</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Phone 3: Visitor Log -->
+                    <div class="showcase-phone showcase-phone-3">
+                        <div class="showcase-phone-screen"
+                            style="background:#0d3d4a; padding:16px 12px; min-height:280px;">
+                            <div style="color:white;font-weight:700;font-size:0.9rem;margin-bottom:4px;">Log Visitor
+                                Entry</div>
+                            <div style="color:rgba(255,255,255,0.4);font-size:0.6rem;margin-bottom:12px;">Record at gate
+                            </div>
+                            <div class="sp-block">
+                                <div class="sp-text-sm">Visitor Name</div>
+                                <div class="sp-text-lg">Rahul Sharma</div>
+                            </div>
+                            <div class="sp-block">
+                                <div class="sp-text-sm">Purpose</div>
+                                <div class="sp-text-lg">Guest</div>
+                            </div>
+                            <div class="sp-block">
+                                <div class="sp-text-sm">Flat No</div>
+                                <div class="sp-text-lg">B-204</div>
+                            </div>
+                            <div
+                                style="background:#00c8b4;color:#0d3d4a;text-align:center;padding:10px;border-radius:10px;font-weight:700;font-size:0.8rem;margin-top:10px;">
+                                Record Entry ✓</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-text">
+                    <div class="section-label reveal">The App</div>
+                    <h2 class="section-title reveal">Two Roles,<br />One Powerful Platform</h2>
+                    <p class="section-desc reveal">Society Secure works seamlessly for both security staff and residents
+                        — each with a tailored interface built for their daily tasks.</p>
+                    <ul class="feature-list reveal">
+                        <li><span class="check">✓</span> Role-based login — Security Guard or House Owner</li>
+                        <li><span class="check">✓</span> Real-time visitor tracking and alert system</li>
+                        <li><span class="check">✓</span> QR code generation and verification at gate</li>
+                        <li><span class="check">✓</span> Integrated maintenance billing and payments</li>
+                        <li><span class="check">✓</span> Marketplace, amenity booking & society notices</li>
+                        <li><span class="check">✓</span> Sign in with Google or Apple — quick setup</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROLES -->
+    <section class="roles" id="roles">
+        <div class="section-container">
+            <div class="roles-header">
+                <div class="section-label reveal">User Roles</div>
+                <h2 class="section-title reveal">Who Uses <span>Society Secure?</span></h2>
+                <p class="section-desc reveal" style="margin:0 auto;">Choose your role and get instant access to tools
+                    built exactly for you.</p>
+            </div>
+            <div class="roles-grid">
+                <div class="role-card reveal">
+                    <span class="role-emoji">👮</span>
+                    <h3>Security Guard</h3>
+                    <p>Manage gate operations efficiently with digital visitor logs, QR scanning, and real-time alerts —
+                        all from your phone.</p>
+                    <div class="role-features">
+                        <div class="role-feature">Log visitor entries digitally</div>
+                        <div class="role-feature">Scan & verify QR passes</div>
+                        <div class="role-feature">View currently inside visitors</div>
+                        <div class="role-feature">See today's complete log</div>
+                    </div>
+                </div>
+                <div class="role-card reveal reveal-delay-1">
+                    <span class="role-emoji">🏠</span>
+                    <h3>House Owner / Resident</h3>
+                    <p>Stay in control of your home and society experience — from pre-approving guests to paying bills
+                        and raising complaints.</p>
+                    <div class="role-features">
+                        <div class="role-feature">Generate guest QR passes</div>
+                        <div class="role-feature">Track visitor history</div>
+                        <div class="role-feature">Pay maintenance bills</div>
+                        <div class="role-feature">Panic alert to all guards</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <div class="section-container">
+            <div class="testimonials-header">
+                <div class="section-label reveal">Reviews</div>
+                <h2 class="section-title reveal">Loved by <span>Residents</span></h2>
+            </div>
+        </div>
+        <div class="testimonials-track-wrap">
+            <div class="testimonials-track">
+                <!-- First set -->
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Society Secure changed how our gate is managed. No more paper registers
+                        — everything is digital and fast. Our guard loves it!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">P</div>
+                        <div>
+                            <div class="author-name">Priya Desai</div>
+                            <div class="author-info">Flat A-204 · Serenity Oaks</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The QR pass feature is brilliant. My parents visited last week and the
+                        guard let them in instantly — no calls needed. Fantastic experience!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">R</div>
+                        <div>
+                            <div class="author-name">Rahul Mehta</div>
+                            <div class="author-info">Flat B-101 · Green Valley</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★☆</div>
+                    <p class="testimonial-text">"The maintenance payment feature saves me a trip every month. I raised a
+                        complaint about water leakage and it was resolved in 2 days!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div>
+                            <div class="author-name">Anjali Shah</div>
+                            <div class="author-info">Flat C-303 · Palm Residency</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"As a security guard, my job is so much easier. Scanning QR codes is
+                        instant. The home dashboard shows me who's inside at a glance."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div>
+                            <div class="author-name">Suresh Patil</div>
+                            <div class="author-info">Security Guard · Pearl Heights</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Amenity booking for the gym is seamless. No more WhatsApp chaos for
+                        slots. The app handles everything automatically — love it!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">V</div>
+                        <div>
+                            <div class="author-name">Vikram Nair</div>
+                            <div class="author-info">Flat D-502 · Lotus Garden</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Duplicate for infinite scroll -->
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Society Secure changed how our gate is managed. No more paper registers
+                        — everything is digital and fast. Our guard loves it!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">P</div>
+                        <div>
+                            <div class="author-name">Priya Desai</div>
+                            <div class="author-info">Flat A-204 · Serenity Oaks</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The QR pass feature is brilliant. My parents visited last week and the
+                        guard let them in instantly — no calls needed. Fantastic experience!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">R</div>
+                        <div>
+                            <div class="author-name">Rahul Mehta</div>
+                            <div class="author-info">Flat B-101 · Green Valley</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★☆</div>
+                    <p class="testimonial-text">"The maintenance payment feature saves me a trip every month. I raised a
+                        complaint about water leakage and it was resolved in 2 days!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div>
+                            <div class="author-name">Anjali Shah</div>
+                            <div class="author-info">Flat C-303 · Palm Residency</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"As a security guard, my job is so much easier. Scanning QR codes is
+                        instant. The home dashboard shows me who's inside at a glance."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">S</div>
+                        <div>
+                            <div class="author-name">Suresh Patil</div>
+                            <div class="author-info">Security Guard · Pearl Heights</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Amenity booking for the gym is seamless. No more WhatsApp chaos for
+                        slots. The app handles everything automatically — love it!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">V</div>
+                        <div>
+                            <div class="author-name">Vikram Nair</div>
+                            <div class="author-info">Flat D-502 · Lotus Garden</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="section-container">
+            <div class="section-label reveal" style="color:var(--accent);">Get The App</div>
+            <h2 class="section-title reveal">Ready to Secure<br />Your Society?</h2>
+            <p class="section-desc reveal">Join 500+ gated communities already using Society Secure. Quick setup,
+                intuitive design, zero paperwork.</p>
+            <div class="cta-buttons reveal">
+                <a href="#" class="app-store-btn">
+                    <div class="store-icon">📱</div>
+                    <div>
+                        <div class="store-text-sm">Download on the</div>
+                        <div class="store-text-lg">App Store</div>
+                    </div>
+                </a>
+                <a href="#" class="app-store-btn">
+                    <div class="store-icon">🤖</div>
+                    <div>
+                        <div class="store-text-sm">Get it on</div>
+                        <div class="store-text-lg">Google Play</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="nav-logo">
+                    <div class="logo-icon">🛡️</div>
+                    Society Secure
+                </a>
+                <p>Smart society management for modern gated communities. Every knock gets verified.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">API</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 <span>Society Secure</span>. All rights reserved. Made with ❤️ in India.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
