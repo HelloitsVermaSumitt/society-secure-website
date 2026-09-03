@@ -1,1 +1,1 @@
-# society-secure-website
+# Society Management Application

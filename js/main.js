@@ -4,35 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ---- CUSTOM CURSOR ----
-    const cursor = document.querySelector('.cursor');
-    const follower = document.querySelector('.cursor-follower');
-    let mouseX = 0, mouseY = 0, followerX = 0, followerY = 0;
 
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX; mouseY = e.clientY;
-        if (cursor) { cursor.style.left = mouseX + 'px'; cursor.style.top = mouseY + 'px'; }
-    });
-
-    function animateFollower() {
-        followerX += (mouseX - followerX) * 0.12;
-        followerY += (mouseY - followerY) * 0.12;
-        if (follower) { follower.style.left = followerX + 'px'; follower.style.top = followerY + 'px'; }
-        requestAnimationFrame(animateFollower);
-    }
-    animateFollower();
-
-    // Cursor hover effect on links/buttons
-    document.querySelectorAll('a, button, .feature-card, .role-card').forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            if (cursor) cursor.style.transform = 'translate(-50%,-50%) scale(2.5)';
-            if (follower) { follower.style.width = '60px'; follower.style.height = '60px'; }
-        });
-        el.addEventListener('mouseleave', () => {
-            if (cursor) cursor.style.transform = 'translate(-50%,-50%) scale(1)';
-            if (follower) { follower.style.width = '36px'; follower.style.height = '36px'; }
-        });
-    });
 
     // ---- NAVBAR SCROLL ----
     const navbar = document.querySelector('.navbar');
@@ -40,20 +12,24 @@ document.addEventListener('DOMContentLoaded', () => {
         if (navbar) {
             navbar.classList.toggle('scrolled', window.scrollY > 60);
         }
-        checkReveal();
     });
 
-    // ---- SCROLL REVEAL ----
-    function checkReveal() {
-        const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-        reveals.forEach(el => {
-            const rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 80) {
-                el.classList.add('visible');
+    // ---- SCROLL REVEAL (INTERSECTION OBSERVER) ----
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
             }
         });
-    }
-    checkReveal();
+    }, {
+        threshold: 0.05,
+        rootMargin: '0px 0px -60px 0px'
+    });
+
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+        revealObserver.observe(el);
+    });
 
     // ---- COUNTER ANIMATION ----
     function animateCounter(el, target, suffix = '') {
@@ -143,22 +119,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ---- TILT EFFECT ON CARDS ----
-    document.querySelectorAll('.feature-card, .role-card').forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            const rotateX = (y - centerY) / centerY * -8;
-            const rotateY = (x - centerX) / centerX * 8;
-            card.style.transform = `translateY(-8px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    if (window.innerWidth > 1024) {
+        document.querySelectorAll('.feature-card, .role-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / centerY * -6;
+                const rotateY = (x - centerX) / centerX * 6;
+                card.style.transform = `translateY(-6px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+            card.style.transition = 'transform 0.1s ease';
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+                card.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+            });
         });
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = '';
-            card.style.transition = 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
-        });
-    });
+    }
 
     // ---- TYPING EFFECT ON HERO ----
     const typingEl = document.querySelector('.typing-text');
